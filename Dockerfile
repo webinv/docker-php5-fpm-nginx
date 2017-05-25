@@ -69,8 +69,8 @@ RUN \
 RUN mkdir -p /etc/nginx/apps.d;
 
 # add configs & data after package install (so packages won't override them)
-#ADD ./etc /etc
-#ADD ./usr /usr
+ADD ./etc /etc
+ADD ./usr /usr
 
 COPY docker-entrypoint.sh /entrypoint.sh
 
